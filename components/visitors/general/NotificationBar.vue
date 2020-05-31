@@ -20,9 +20,6 @@ export default {
 </script>
 
 <style scoped>
-    div {
-        padding: 0px;
-    }
     .full-background {
         padding: 10px;
         z-index: 0;
