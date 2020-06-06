@@ -1,13 +1,7 @@
 <template>
   <div>
     <div class="cards">
-      <div
-        v-for="site in sites"
-        :key="site.id"
-        class="card status"
-      >
-        <SiteStatus :site="site" />
-      </div>
+      
       <div
         v-if="openIncidents.length >0"
         class="card incidents"
@@ -21,6 +15,13 @@
             <IncidentListItem :incident="i" />
           </nuxt-link>
         </div>
+      </div>
+      <div
+        v-for="site in sites"
+        :key="site.id"
+        class="card status"
+      >
+        <SiteStatus :site="site" />
       </div>
         <div class="calendar">
             <HistoryPart />
