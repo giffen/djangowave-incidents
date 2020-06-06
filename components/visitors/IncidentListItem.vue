@@ -12,9 +12,10 @@
 </template>
 
 <script>
-import moment from 'moment'
+import { timeFormatter } from '@/mixins/DateTimeFilters'
 export default {
     name: 'Incident',
+    mixins: [timeFormatter],
     props: {
         incident: {
             type: Object,
@@ -26,11 +27,7 @@ export default {
             return this.incident.update_set[0]
         }
     },
-    filters: {
-        timeAgo (value) {
-            return moment.utc(value).fromNow()
-        }
-    }
+    
 }
 </script>
 

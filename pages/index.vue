@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .calendar {
   font-family: Montserrat;
   font-weight: 300;
